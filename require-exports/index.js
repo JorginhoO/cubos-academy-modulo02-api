@@ -1,5 +1,5 @@
 const {uniq} = require('lodash'); //importar biblioteca ou arquivo
-const arrays = require('./arrays') // importando a linha de codigo de outro arquivos 
+const arrays = require('../require-exports/arrays') // importando a linha de codigo de outro arquivos 
 
 
 const arrayUnico = arrays.split("");

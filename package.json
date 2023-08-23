@@ -14,6 +14,7 @@
   "author": "JorgeDev_",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "lodash": "^4.17.21"
   }
 }
