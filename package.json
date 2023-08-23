@@ -1,0 +1,19 @@
+{
+  "name": "servidor-cubos-academy",
+  "version": "0.0.1",
+  "description": "Meu primeiro servidor no curso cubos academy back-end modulo02",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "javacript",
+    "npm"
+  ],
+  "author": "JorgeDev_",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
