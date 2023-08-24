@@ -1,5 +1,6 @@
 const express = require('express'); // importador  servidor Http
-const professores = require('../src/arrays');
+
+const { buscarProfessores, buscarIdProfessores } = require('../src/controladores/professores');
 
 const app = express();
 
@@ -8,25 +9,10 @@ app.get('/', (req, resp) => {
 });
 
 //localhost:3000/professores
-app.get('/professores', (req, resp) => {
-   const { stack } = req.query;  // paramentro de consulta
-   let resultado = professores;
-
-   if (stack) {
-      resultado = professores.filter((professor) => {
-         return professor.stack === stack;
-      });
-   }
-   resp.send(resultado);
-});
+app.get('/professores', buscarProfessores);
 
 //localhost:3000/professores/4
-app.get('/professores/:id', (req, resp) => {
-   const professorId = professores.find((professor) => {
-      return professor.id === Number(req.params.id); // paramentros de rotas
-   });
-   resp.send(professorId);
-});
+app.get('/professores/:id', buscarIdProfessores);
 
 
 
