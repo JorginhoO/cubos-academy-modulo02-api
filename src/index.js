@@ -4,8 +4,13 @@ const { buscarProfessores, buscarIdProfessores } = require('../src/controladores
 
 const app = express();
 
+app.use = ((req, resp, next) => {      //intermediários (autenticação) "Middleware""
+   console.log('Passei pelo intermediário');
+   next();
+});
+
 app.get('/', (req, resp) => {
-   resp.send('Hello World!! This is my first server...')  //resposta verbo get Http 
+   resp.send('Olá Mundo... Este é meu primeiro servidor!!')  //resposta verbo get Http 
 });
 
 //localhost:3000/professores
